@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seguimiento del Pedido | Vega'Store</title>
+  <link rel="stylesheet" href="../stilos/seguimiento.css" />
+</head>
+<body>
+  <header class="head">
+    <div class="logo"><a href="/htmls/index.html">Vega<span>'Store</span></a></div>
+    <nav class="navbar">
+      <a href="/htmls/index.html">Inicio</a>
+    </nav>
+  </header>
+
+  <main class="seguimiento">
+    <h1>Seguimiento del Pedido</h1>
+    <section class="formulario-seguimiento">
+      <h2>Consulta el estado de tu pedido</h2>
+      <p>Introduce tu número de pedido y el correo electrónico que usaste en la compra.</p>
+
+      <form id="formSeguimiento">
+        <label for="pedido">Número de pedido:</label>
+        <input type="text" id="pedido" name="pedido" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <button type="submit">Consultar</button>
+      </form>
+
+      <div id="resultado"></div>
+    </section>
+
+  <footer>
+    <p>&copy; 2025 Vega'Store. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="../scrips/seguimiento.js"></script>
+</body>
+</html>
+

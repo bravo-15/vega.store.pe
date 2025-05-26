@@ -1,0 +1,203 @@
+/* Variables de colores */
+:root {
+  --color-fondo: #f8f8f8;
+  --color-texto: #222222;
+  --color-header-bg: #fafafa;
+  --color-header-shadow: rgba(0, 0, 0, 0.1);
+  --color-logo: #070707;
+  --color-nav-link: #0e0d0d;
+  --color-btn-danger: #f44336;
+  --color-btn-primary-bg: #777777;
+  --color-btn-primary-bg-hover: #444444;
+  --color-btn-link-bg: #89e6f7;
+  --color-btn-link-bg-hover: #104b6b;
+  --color-btn-link-text: #000000;
+  --color-btn-link-shadow: rgba(0, 0, 0, 0.2);
+  --color-btn-link-shadow-hover: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Header fijo y con sombra */
+.head {
+  background-color: var(--color-header-bg);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px var(--color-header-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.head .logo a {
+  color: var(--color-logo);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navegación */
+.navbar a {
+  color: var(--color-nav-link);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: var(--color-btn-link-bg-hover);
+  outline: none;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px var(--color-header-shadow);
+}
+
+/* Títulos */
+h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Contenedor del carrito */
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Elemento individual del carrito */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.cart-item div {
+  flex: 1;
+}
+
+/* Botón eliminar en rojo */
+.cart-item button {
+  background: var(--color-btn-danger);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cart-item button:hover,
+.cart-item button:focus {
+  background: #d32f2f;
+  outline: none;
+}
+
+/* Total del carrito */
+#cart-total {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Botón general (gris) */
+.btn {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  background: var(--color-btn-primary-bg);
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.btn:hover,
+.btn:focus {
+  background: var(--color-btn-primary-bg-hover);
+  outline: none;
+}
+
+/* Botón tipo enlace con estilo (solo para <a>) */
+a.btn_a {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: var(--color-btn-link-bg);
+  color: var(--color-btn-link-text);
+  border-radius: 25px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 6px var(--color-btn-link-shadow);
+  transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
+}
+
+a.btn_a:hover,
+a.btn_a:focus {
+  background: var(--color-btn-link-bg-hover);
+  box-shadow: 0 6px 10px var(--color-btn-link-shadow-hover);
+  outline: none;
+}
+
+a.btn_a:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px var(--color-btn-link-shadow);
+}
+
+/* Media Queries para responsividad */
+
+@media (max-width: 600px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar a {
+    margin-left: 0;
+    margin-right: 15px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  #cart-items {
+    flex-direction: column;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  main {
+    padding: 15px;
+    margin: 20px auto;
+  }
+}

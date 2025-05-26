@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofertas - Vega'Store</title>
+  <link rel="stylesheet" href="/stilos/ofertas.css">
+</head>
+<body>
+  <header class="head">
+    <div class="logo"><a href="/htmls/index.html">Vega<span>'Store</span></a></div>
+    <nav class="navbar">
+      <a href="/htmls/index.html">Inicio</a>
+      <a href="/htmls/pagos.html">Pagar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>🔥 Ofertas Especiales</h2>
+      <div class="contenedor-productos" id="ofertas-container"></div>
+    </section>
+  </main>
+
+  <script>
+    const ofertas = [
+      { nombre: "Vestido Straple", precio: 14.99, imagen: "/img/imagenes/7 (2).png" },
+      { nombre: "Vestido Otoño", precio: 19.99, imagen: "/img/imagenes/1.1.png" },
+      { nombre: "Vestido Baby", precio: 29.50, imagen: "/img/imagenes/1.2.png" }
+    ];
+
+    const contenedor = document.getElementById('ofertas-container');
+
+    ofertas.forEach(producto => {
+      const card = document.createElement('div');
+      card.className = 'tarjeta-producto';
+      card.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p class="precio">S/ ${producto.precio.toLocaleString('es-PE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>`;
+      contenedor.appendChild(card);
+    });
+
+    function agregarAlCarrito(nombre, precio, imagen) {
+      const producto = { nombre, precio, imagen };
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      carrito.push(producto);
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+      alert(`${nombre} se agregó al carrito.`);
+    }
+  </script>
+
+</body>
+</html>

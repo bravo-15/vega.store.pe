@@ -1,0 +1,130 @@
+/* preguntas-frecuentes.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f3f6fb, #ffffff);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+/* CABECERA SUPERIOR */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#000000;
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo Vega'Store */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Menú de navegación */
+.navbar a {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff00d4;
+}
+
+/* CABECERA BANNER */
+.header {
+  background: 
+  color white;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #007acc30;
+}
+
+/* FAQ Item */
+.faq-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+/* Pregunta */
+.faq-question {
+  font-weight: 700;
+  cursor: pointer;
+  padding: 14px 0;
+  position: relative;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+  color: #007acc;
+}
+
+/* Icono + / - */
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+  color: #007acc;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+  content: '-';
+  transform: rotate(180deg);
+}
+
+/* Respuesta */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  transition: max-height 0.5s ease, padding-top 0.4s ease;
+}
+
+.faq-answer.show {
+  display: block;
+  padding-top: 12px;
+  max-height: 1000px;
+}
+
+/* Efecto clic */
+.faq-question:active {
+  transform: scale(0.98);
+}

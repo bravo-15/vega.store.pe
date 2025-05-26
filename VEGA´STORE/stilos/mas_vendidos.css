@@ -1,0 +1,103 @@
+/* Reset y estilos base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  color: #222;
+  margin: 20px;
+  padding: 0 20px;
+}
+
+/* Header sticky */
+.head {
+  background: #fafafa;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.head .logo a {
+  color: #070707;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a {
+  color: #0e0d0d;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+/* Título de sección */
+h2 {
+  color: #ff9800;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Contenedor de productos - grid responsivo */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.tarjeta-producto {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Imagen del producto */
+.tarjeta-producto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Nombre del producto */
+.tarjeta-producto h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Precio destacado */
+.precio {
+  font-weight: bold;
+  color: #ff9800;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Botón */
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #388e3c;
+}

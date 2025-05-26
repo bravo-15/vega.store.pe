@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito de Compras - Vega'Store</title>
+  <link rel="stylesheet" href="/stilos/carrito.css" />
+</head>
+<body>
+  <header class="head">
+    <div class="logo"><a href="/htmls/index.html">Vega<span>'Store</span></a></div>
+    <nav class="navbar">
+      <a href="/htmls/index.html">Inicio</a>
+      <a href="/htmls/pagos.html">Pagar</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Tu Carrito</h1>
+    <section id="cart-items" aria-label="Productos en el carrito"></section>
+    <section id="cart-total" aria-label="Total del carrito"></section>
+    
+    <div class="cart-buttons">
+      <button id="clear-cart" class="btn">Vaciar Carrito</button>
+      <a href="/htmls/pagos.html" class="btn_a">Procesar Pago</a>
+    </div>
+  </main>
+
+  <script src="/scrips/carrito.js"></script>
+</body>
+</html>
+

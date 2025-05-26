@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos para Niñas - Vega'Store</title>
+  <link rel="stylesheet" href="../stilos/para_niñas.css" />
+</head>
+<body>
+  <h1>Productos para Niñas</h1>
+<div>
+  <div class="filter-menu">
+    <button class="active" data-filter="all">Todos</button>
+    <button data-filter="estilos">vestidos</button>
+    <button data-filter="conjuntos">Conjuntos</button>
+    <button data-filter="pijamas">Pijamas</button>
+  </div>
+
+  <div class="products-container">
+    <div class="product-card" data-category="vestidos">
+      <img src="/img/imagenes/1.1.png" alt="Vestido Floral" />
+      <h3>Vestido Floral</h3>
+      <p>Estilo fresco y cómodo para niñas.</p>
+    </div>
+
+    <div class="product-card" data-category="conjuntos">
+      <img src="/img/imagenes/1.2.png" alt="Conjunto Verano" />
+      <h3>Conjunto Verano</h3>
+      <p>Perfecto para días soleados.</p>
+    </div>
+
+    <div class="product-card" data-category="pijamas">
+      <img src="/img/imagenes/1.3.png" alt="Pijama Estrellas" />
+      <h3>Pijama Estrellas</h3>
+      <p>Suave y cómodo para dormir mejor.</p>
+    </div>
+
+    <div class="product-card" data-category="vestidos">
+      <img src="/img/imagenes/1.4.png" alt="Blusa Colorida" />
+      <h3>Blusa Colorida</h3>
+      <p>Estilo moderno para niñas.</p>
+    </div>
+
+    <div class="product-card" data-category="conjuntos">
+      <img src="/img/imagenes/1.4.png" alt="Conjunto Deportivo" />
+      <h3>Conjunto Deportivo</h3>
+      <p>Ideal para actividades al aire libre.</p>
+    </div>
+
+    <div class="product-card" data-category="pijamas">
+      <img src="/img/imagenes/1.5.png" alt="Pijama Rosado" />
+      <h3>Pijama Rosado</h3>
+      <p>Con estampado adorable y suave tela.</p>
+    </div>
+  
+    <div class="product-card" data-category="vestidos">
+      <img src="/img/imagenes/1.4.png" alt="Blusa Colorida" />
+      <h3>Blusa Colorida</h3>
+      <p>Estilo moderno para niñas.</p>
+    </div>
+
+    <div class="product-card" data-category="conjuntos">
+      <img src="/img/imagenes/1.4.png" alt="Conjunto Deportivo" />
+      <h3>Conjunto Deportivo</h3>
+      <p>Ideal para actividades al aire libre.</p>
+    </div>
+
+    <div class="product-card" data-category="pijamas">
+      <img src="/img/imagenes/1.5.png" alt="Pijama Rosado" />
+      <h3>Pijama Rosado</h3>
+      <p>Con estampado adorable y suave tela.</p>
+    </div>
+    <div class="product-card" data-category="vestidos">
+      <img src="/img/imagenes/1.4.png" alt="Blusa Colorida" />
+      <h3>Blusa Colorida</h3>
+      <p>Estilo moderno para niñas.</p>
+    </div>
+
+    <div class="product-card" data-category="conjuntos">
+      <img src="/img/imagenes/1.4.png" alt="Conjunto Deportivo" />
+      <h3>Conjunto Deportivo</h3>
+      <p>Ideal para actividades al aire libre.</p>
+    </div>
+
+    <div class="product-card" data-category="pijamas">
+      <img src="/img/imagenes/1.5.png" alt="Pijama Rosado" />
+      <h3>Pijama Rosado</h3>
+      <p>Con estampado adorable y suave tela.</p>
+    </div>
+  </div>
+  
+
+  <script>
+    const buttons = document.querySelectorAll('.filter-menu button');
+    const products = document.querySelectorAll('.product-card');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        products.forEach(product => {
+          if (filter === 'all' || product.getAttribute('data-category') === filter) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vega'Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Vega'Store - Tienda de moda con vestidos, ropa para mujer y niñas. Descubre productos únicos al mejor precio.">
+  <link rel="stylesheet" href="/stilos/style.css" />
+</head>
+
+<body>
+  <!-- Encabezado -->
+  <header class="head">
+    <div class="logo"><a href="#">Vega<span>'Store</span></a></div>
+    <input type="text" id="buscador" placeholder="Buscar productos...">
+    <nav class="navbar">
+      <a href="#productos">Productos</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#descubre">Descubre</a>
+      <a href="/htmls/login.html">Iniciar sesión</a>
+      <a href="/htmls/CARRITO.html" id="open-cart" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    </nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <!-- Sección hero con video -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop>
+      <source src="/stilos/video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-content">
+      <h1 class="logo-animado">Vega'Store</h1>
+      <p class="slogan">La moda que te define</p>
+      <div class="botones">
+        <a href="#productos" class="btn-blanco">Ver Productos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de categorías -->
+  <section id="categorias" class="categorias">
+    <h2 class="title">Categorías</h2>
+    <div class="categoria-container">
+      <div class="categoria-box" tabindex="0">
+        <img src="/img/imagenes/1.png" alt="Moda Mujer" />
+        <a href="../htmls/para_mujer.html" class="boton-mujeres">Para mujeres</a>
+      </div>
+      <div class="categoria-box" tabindex="0">
+        <img src="/img/imagenes/2.png" alt="Moda Niñas" />
+        <a href="../htmls/para_niña.html" class="boton-niñas">Para niñas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos destacados -->
+      <section id="productos" class="productos">
+  <h2 class="title">Productos Destacados</h2>
+  <div class="box-container">
+    
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/1.png" alt="Vestido primavera" />
+      <h3>Vestido primavera</h3>
+      <p>S/49.99</p>
+      <button class="add-to-cart" data-id="p1" data-name="Vestido primavera" data-price="49.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/2.png" alt="Vestido casual niña" />
+      <h3>Vestido casual niña</h3>
+      <p>S/19.99</p>
+      <button class="add-to-cart" data-id="p2" data-name="Vestido casual niña" data-price="19.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/3.png" alt="Vestido Jessi" />
+      <h3>Vestido Jessi</h3>
+      <p>S/69.99</p>
+      <button class="add-to-cart" data-id="p3" data-name="Vestido Jessi" data-price="69.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/1.3.png" alt="Vestido Sintia" />
+      <h3>Vestido Sintia</h3>
+      <p>S/59.99</p>
+      <button class="add-to-cart" data-id="p4" data-name="Vestido Sintia" data-price="59.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/4.png" alt="Vestido Vero" />
+      <h3>Vestido Vero</h3>
+      <p>S/89.99</p>
+      <button class="add-to-cart" data-id="p5" data-name="Vestido Vero" data-price="89.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/5.png" alt="Vestido Carolina" />
+      <h3>Vestido Carolina</h3>
+      <p>S/56.99</p>
+      <button class="add-to-cart" data-id="p6" data-name="Vestido Carolina" data-price="56.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/c2.jpg" alt="Vestido Straple" />
+      <h3>Vestido Straple</h3>
+      <p>S/40.99</p>
+      <button class="add-to-cart" data-id="p7" data-name="Vestido Straple" data-price="40.99">Agregar al carrito</button>
+    </div>
+
+    <div class="box">
+      <img class="product-image" src="/img/imagenes/1.1.png" alt="Zapatos Deportivos" />
+      <h3>Zapatos Deportivos</h3>
+      <p>S/57.99</p>
+      <button class="add-to-cart" data-id="p8" data-name="Zapatos Deportivos" data-price="57.99">Agregar al carrito</button>
+    </div>
+
+  </div>
+</section>
+
+      <!-- (otros productos similares aquí...) -->
+    </div>
+  </section>
+
+  <!-- Sección descubre -->
+  <section id="descubre" class="descubre">
+    <h2 class="title">Descubre</h2>
+    <div class="descubre-container">
+      <div class="descubre-box" tabindex="0">
+        <img src="/img/imagenes/1.png" alt="Ofertas" />
+        <a href="/htmls/ofertas.html" class="boton-ofertas">Ofertas</a>
+      </div>
+      <div class="descubre-box" tabindex="0">
+        <img src="/img/imagenes/2.png" alt="Más vendidos" />
+        <a href="/htmls/mas_vendidos.html" class="boton-vendidos">Más vendidos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-prada">
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h3>SUSCRÍBASE A NUESTRO BOLETÍN</h3>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Introduzca su dirección de correo electrónico *" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <p class="privacy-text">
+        Al hacer clic en "Suscribirse" confirma que ha leído y entendido nuestra 
+        <a href="#">Política de Privacidad</a>.
+      </p>
+    </div>
+
+    <!-- Enlaces rápidos -->
+    <div class="footer-sections">
+      <!-- Ayuda -->
+      <div class="footer-column">
+        <h4>¿Necesita ayuda?</h4>
+        <ul>
+          <li>Llámenos +51 989386241</li>
+          <li><a href="https://wa.me/989386241" target="_blank">WhatsApp</a></li>
+          <li><a href="/htmls/preguntas.html">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <!-- Servicios -->
+      <div class="footer-column">
+        <h4>Servicios exclusivos</h4>
+        <ul>
+          <li><a href="/htmls/servicios.html">Servicios de Vega'Store</a></li>
+          <li><a href="/htmls/seguimiento.html">Seguimiento del pedido</a></li>
+          <li><a href="/htmls/devoluciones.html">Devoluciones</a></li>
+        </ul>
+      </div>
+
+      <!-- Empresa -->
+      <div class="footer-column">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="../htmls/reseña.html">Sobre Vega'Store</a></li>
+          <li><a href="/htmls/trabajs.html">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../htmls/terminos.html">Términos y condiciones</a></li>
+          <li><a href="/htmls/avisolegal.html">Aviso legal</a></li>
+          <li><a href="/htmls/politica.html">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Redes sociales -->
+<div class="footer-bottom">
+  <div class="social-icons">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/Vega'store" target="_blank" class="social facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/vegastore_24" target="_blank" class="social instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/" target="_blank" class="social whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p>© Derechos reservados Vega'Store 2025</p>
+</div>
+
+
+  <!-- Panel de admin oculto, se muestra si el usuario es admin -->
+  <div id="admin-panel" style="display: none;">
+    <a href="/admin/admin.html">Panel de administración</a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Verifica si el usuario es admin
+    fetch('/backend/is_admin.php')
+      .then(res => res.json())
+      .then(data => {
+        if (data.admin) {
+          document.getElementById('admin-panel').style.display = 'block';
+        }
+      });
+  </script>
+
+  <script src="/scrips/admin.js"></script>
+  <script src="/scrips/index.js"></script>
+</body>
+</html>

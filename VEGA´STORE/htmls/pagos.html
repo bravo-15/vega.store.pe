@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pago - Vega'Store</title>
+  <link rel="stylesheet" href="/stilos/pago.css" />
+</head>
+<body>
+  <header class="head">
+    <div class="logo"><a href="/htmls/index.html">Vega<span>'Store</span></a></div>
+    <nav class="navbar">
+      <a href="/htmls/index.html">Inicio</a>
+      <a href="/htmls/carrito.html">Carrito</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Proceso de pago </h1>
+    <form id="payment-form">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required />
+
+      <label for="tarjeta">Número de tarjeta:</label>
+      <input type="text" id="tarjeta" name="tarjeta" pattern="\d{16}" maxlength="16" inputmode="numeric" required />
+
+      <label for="expiracion">Fecha de expiración (MM/AA):</label>
+      <input type="text" id="expiracion" name="expiracion" pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/AA" required />
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" pattern="\d{3}" maxlength="3" inputmode="numeric" required />
+
+      <button type="submit" class="btn btn-primary">Pagar</button>
+    </form>
+
+    <div id="mensaje" style="margin-top: 20px;"></div>
+  </main>
+
+  <script src="/scrips/pago.js"></script>
+</body>
+</html>

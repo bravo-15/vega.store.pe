@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel de Administración - Vega'Store</title>
+  <link rel="stylesheet" href="../stilos/admi.css" />
+</head>
+<body>
+  <h1>Panel de Administración - Vega'Store</h1>
+
+  <section id="gestion-productos">
+    <h2>Gestión de Productos</h2>
+    <form id="form-producto">
+      <input type="text" id="nombre" placeholder="Nombre del producto" required />
+      <input type="text" id="descripcion" placeholder="Descripción" required />
+      <input type="number" id="precio" placeholder="Precio" required />
+      <input type="text" id="imagen" placeholder="URL de imagen" required />
+      <button type="submit">Agregar producto</button>
+    </form>
+    <div id="lista-productos"></div>
+  </section>
+
+  <section id="gestion-pedidos">
+    <h2>Pedidos Realizados</h2>
+    <div id="lista-pedidos"></div>
+  </section>
+
+  <script src="../scrips/admin.js"></script>
+</body>
+</html>

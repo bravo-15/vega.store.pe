@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Más Vendidos - Vega'Store</title>
+  <link rel="stylesheet" href="/stilos/mas_vendidos.css" />
+</head>
+<body>
+
+  <header class="head">
+    <div class="logo"><a href="/htmls/index.html">Vega<span>'Store</span></a></div>
+    <nav class="navbar">
+      <a href="/htmls/index.html">Inicio</a>
+      <a href="/htmls/pagos.html">Pagar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>⭐ Más Vendidos</h2>
+      <div class="contenedor-productos" id="masvendidos-container"></div>
+    </section>
+  </main>
+
+  <script>
+    const masVendidos = [
+      { nombre: "Vestido Floral", precio: "89.99", imagen: "/img/imagenes/1.8.png" },
+      { nombre: "Camisa Casual", precio: "78.50", imagen: "/img/imagenes/1.7.png" },
+      { nombre: "conjunto priss", precio: "119.99", imagen: "/img/imagenes/1.9.png" },
+      { nombre: "conjunto vegui", precio: "145.80", imagen: "/img/imagenes/1.6.png" },
+      { nombre: "vestido primavera casual", precio: "97.90", imagen: "/img/imagenes/1.5.png" },
+      { nombre: "conjunto niña", precio: "80.90", imagen: "/img/imagenes//10.png" },
+      { nombre: "camisa asual", precio: "190.99", imagen: "/img/imagenes/1.4.png" },
+
+      
+      
+    ];
+
+    const contenedor = document.getElementById('masvendidos-container');
+
+    masVendidos.forEach(producto => {
+      const card = document.createElement('div');
+      card.className = 'tarjeta-producto';
+      card.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+       <p class="precio">S/ ${producto.precio.toLocaleString('es-PE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+        <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+      `;
+      contenedor.appendChild(card);
+    });
+
+    function agregarAlCarrito(nombre, precio) {
+      // Puedes ajustar esto para guardar en localStorage o llamar al backend
+      alert(`${nombre} se agregó al carrito.`);
+    }
+  </script>
+
+</body>
+</html>
